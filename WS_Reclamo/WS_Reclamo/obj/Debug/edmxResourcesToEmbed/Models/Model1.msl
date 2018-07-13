@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CREDIEXPRESSModelStoreContainer" CdmEntityContainer="dbContext">
+    <EntitySetMapping Name="CL_RelPerDoc">
+      <EntityTypeMapping TypeName="CREDIEXPRESSModel.CL_RelPerDoc">
+        <MappingFragment StoreEntitySet="CL_RelPerDoc">
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="CodPais" ColumnName="CodPais" />
+          <ScalarProperty Name="TipoDoc" ColumnName="TipoDoc" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="TipoPer" ColumnName="TipoPer" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="FecCaducidad" ColumnName="FecCaducidad" />
+          <ScalarProperty Name="TZ_LOCK" ColumnName="TZ_LOCK" />
+          <ScalarProperty Name="FECHAEMISION" ColumnName="FECHAEMISION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WU_TablaDato">
+      <EntityTypeMapping TypeName="CREDIEXPRESSModel.WU_TablaDato">
+        <MappingFragment StoreEntitySet="WU_TablaDato">
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Relacion" ColumnName="Relacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

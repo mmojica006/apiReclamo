@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CREDIEXPRESSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CL_RelPerDoc">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="CodPais" />
+      <PropertyRef Name="TipoDoc" />
+      <PropertyRef Name="NroDocumento" />
+    </Key>
+    <Property Name="IdPersona" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CodPais" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoDoc" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoPer" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Principal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FecCaducidad" Type="DateTime" Precision="3" />
+    <Property Name="TZ_LOCK" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="FECHAEMISION" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="dbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CL_RelPerDoc" EntityType="Self.CL_RelPerDoc" />
+    <EntitySet Name="WU_TablaDato" EntityType="CREDIEXPRESSModel.WU_TablaDato" />
+  </EntityContainer>
+  <EntityType Name="WU_TablaDato">
+    <Key>
+      <PropertyRef Name="Relacion" />
+      <PropertyRef Name="Valor" />
+    </Key>
+    <Property Name="Relacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
