@@ -18,6 +18,7 @@ namespace WS_Reclamo.Controllers
         public String serviceName { get; set; }
         public Dictionary<String, String> parametros { get; set; }
         public String salida { get; set; }
+        public String noReclamo { get; set; }
 
 
         public TopMiddleHelperController()
@@ -166,6 +167,8 @@ namespace WS_Reclamo.Controllers
                         r2 = documentoXml.SelectSingleNode("TopazMiddleWareResponse//" +
                             serviceName + "//" + SalidaParam[1]).InnerText.ToString();
 
+                       
+
                         if (r1 == "1")
                         {
                             strRespuesta = "Error HTTP-400 Validación Topaz " + r1 + " : " + r2;
@@ -174,6 +177,7 @@ namespace WS_Reclamo.Controllers
                         {
                             strRespuesta = "HTTP-200: Successfull Operation";
                             success = true;
+                            noReclamo = r2;
                         }
                     }
                 }
