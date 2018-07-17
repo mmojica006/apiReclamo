@@ -170,3 +170,7 @@ C:\Desarrollo\apiReclamo\WS_Reclamo\WS_Reclamo\obj\Debug\WS_Reclamo.pdb
 C:\Desarrollo\apiReclamo\WS_Reclamo\WS_Reclamo\bin\EntityFramework.SqlServer.dll
 C:\Desarrollo\apiReclamo\WS_Reclamo\WS_Reclamo\bin\EntityFramework.SqlServer.xml
 C:\Desarrollo\apiReclamo\WS_Reclamo\WS_Reclamo\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\bin\EntityFramework.SqlServer.dll
+C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\bin\EntityFramework.SqlServer.xml
+C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\obj\Debug\WS_Reclamo.csprojResolveAssemblyReference.cache
