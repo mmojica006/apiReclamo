@@ -92,13 +92,13 @@ namespace WS_Reclamo.Controllers
         private bool existPerson(string nroDoc)
         {
             bool result = false;
-            var dataPersona = new CL_RELPERDOC();
+            var dataPersona = new CL_RelPerDoc();
 
             try
             {
                 using (var ctx = new dbContext())
                 {
-                    dataPersona = ctx.CL_RELPERDOC.Where(x => x.NroDocumento == nroDoc).SingleOrDefault();
+                    dataPersona = ctx.CL_RelPerDoc.Where(x => x.NroDocumento == nroDoc).SingleOrDefault();
                    if (dataPersona !=null)
                     result=true;
 
