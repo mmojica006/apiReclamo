@@ -22,14 +22,23 @@ namespace WS_Reclamo.Controllers
 
             try
             {
-                String ReclamoTopaz = executeOperative(reclamo);
+                if (existPerson(reclamo.NroDoc))
+                {
 
-                if (ReclamoTopaz.Contains("HTTP-200")){
+           
+                    String ReclamoTopaz = executeOperative(reclamo);
 
-                    Response = "HTTP-200: 0";
+                    if (ReclamoTopaz.Contains("HTTP-200")){
 
-                }else{
-                    Response = ReclamoTopaz;
+                        Response = "HTTP-200: 0";
+
+                    }else{
+                        Response = ReclamoTopaz;
+                    }
+                }
+                else
+                {
+                    Response = "No existe en sistema";
                 }
 
             }
@@ -80,12 +89,18 @@ namespace WS_Reclamo.Controllers
             return result;
 
         }
-        private bool validaCedula(string nroDoc)
+        private bool existPerson(string nroDoc)
         {
+            bool result = false;
+            var dataPersona = new CL_RELPERDOC();
+
             try
             {
                 using (var ctx = new dbContext())
                 {
+                    dataPersona = ctx.CL_RELPERDOC.Where(x => x.NroDocumento == nroDoc).SingleOrDefault();
+                   if (dataPersona !=null)
+                    result=true;
 
                 }
 
@@ -93,7 +108,11 @@ namespace WS_Reclamo.Controllers
             catch (Exception ex)
             {
                 throw;
+                string message = ex.Message.ToString();
+                return false;
             }
+
+            return result;
 
           
 

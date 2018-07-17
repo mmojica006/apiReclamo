@@ -82,4 +82,3 @@ C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\bin\zh-Hans\System.Spatial.resou
 C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\bin\zh-Hant\System.Spatial.resources.dll
 C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\obj\Debug\WS_Reclamo.dll
 C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\obj\Debug\WS_Reclamo.pdb
-C:\Desarrollos\apiReclamo\WS_Reclamo\WS_Reclamo\obj\Debug\WS_Reclamo.csprojResolveAssemblyReference.cache

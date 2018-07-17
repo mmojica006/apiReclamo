@@ -9,16 +9,17 @@ namespace WS_Reclamo.Models
     public partial class dbContext:DbContext
     {
         public dbContext()
-            : base("name=dbContext")
+            : base("name=CrediexpressContext")
         {
-
+      
         }
         public virtual DbSet<Reclamo>  Reclamo { get; set; }
+        public virtual DbSet<CL_RELPERDOC> CL_RELPERDOC { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-       
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+      
+        //}
 
 
 
